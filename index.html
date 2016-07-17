@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="utf-8">
     <meta name="author" content="Sobchenyuk">
@@ -28,6 +28,10 @@
         function submitform() {
             document.myform2.submit();
         }
+        console.info("ПОЗДРАВЛЯЕМ!! Cайт полностью валидный");
+        console.warn("САЙТ СОБРАН НА ->PURECSS<-");
+        console.warn("ЕСЛИ ВЫ ДУМАЕТЕ ЧТО ОН БУТСТРАПЕ ВЫ ОШИБАЕТЕСЬ");
+        console.error("ДИЗАЙН НЕ КОРРЕКТНЫЙ");
     </script>
     <script type="text/javascript">
         function validate_form ( )
@@ -52,6 +56,7 @@
         document.createElement('header');
         document.createElement('nav');
         document.createElement('main');
+        document.createElement('menu');
         document.createElement('section');
         document.createElement('article');
         document.createElement('aside');
@@ -60,7 +65,7 @@
 </head>
 <body>
 
-<article class="wrapper center-block">
+<div class="wrapper center-block">
 
 
     <header class="header">
@@ -83,7 +88,7 @@
                     <input type="text" name="login" placeholder="логин" >
                     <input type="password" name="passvord" placeholder="пароль" >
 
-                    <input type="submit" class="main__form__link submit" name="" value="вход">
+                    <input type="submit" class="main__form__link submit"  value="вход">
                     <!-- <a href="javascript: submitform()" class="header__top__main_form__link submit">вход</a> -->
                     <span class="header__top__main_form span">|</span>
                     <a href="#" class="header__top__main_form__link one">регистрация</a>
@@ -115,18 +120,18 @@
 
         </figure>
 
-        <section class="header__banner">
+        <div class="header__banner">
             <figure>
                 <div class="header__logo">
 
 
                 </div>
             </figure>
-        </section>
+        </div>
 
     </header>
 
-    <section class="navigator">
+    <div class="navigator">
         <figure>
             <nav class="nav">
                 <ul class="menu__right">
@@ -164,7 +169,7 @@
 
             </nav>
         </figure>
-    </section>
+    </div>
 
 
     <main class="main">
@@ -175,11 +180,11 @@
                     <h3 class="menu__zagalovok">
                         КАТАЛОГ ПРОДУКЦИИ:
                     </h3>
-                    <section class="menu__kategorii">
+                    <div class="menu__kategorii">
                         <p class="menu__nazvanie">
                             ШИНЫ
                         </p>
-                        <menu class="menu__main">
+                        <div class="menu__main">
                             <ul class="menu__spisok">
                                 <li class="menu__item">
                                     <a href="#" class="menu__item__links">Наименование 1</a>
@@ -194,13 +199,13 @@
                                     <a href="#" class="menu__item__links">Наименование 4</a>
                                 </li>
                             </ul>
-                        </menu>
-                    </section>
-                    <section class="menu__kategorii diski">
+                        </div>
+                    </div>
+                    <div class="menu__kategorii diski">
                         <p class="menu__nazvanie">
                             ДИСКИ
                         </p>
-                        <menu class="menu__main">
+                        <div class="menu__main">
                             <ul class="menu__spisok">
                                 <li class="menu__item">
                                     <a href="#" class="menu__item__links">Наименование 1</a>
@@ -215,13 +220,13 @@
                                     <a href="#" class="menu__item__links">Наименование 4</a>
                                 </li>
                             </ul>
-                        </menu>
-                    </section>
-                    <section class="menu__kategorii bolti">
+                        </div>
+                    </div>
+                    <div class="menu__kategorii bolti">
                         <p class="menu__nazvanie">
                             БОЛТЫ
                         </p>
-                        <menu class="menu__main">
+                        <div class="menu__main">
                             <ul class="menu__spisok">
                                 <li class="menu__item">
                                     <a href="#" class="menu__item__links">Наименование 1</a>
@@ -236,14 +241,14 @@
                                     <a href="#" class="menu__item__links">Наименование 4</a>
                                 </li>
                             </ul>
-                        </menu>
-                    </section>
+                        </div>
+                    </div>
 
                 </aside>
             </div>
 
             <div class="pure-u-2-5">
-                <section class="menu__vitrina">
+                <div class="menu__vitrina">
                     <article>
 
                         <div class="pure-g-r">
@@ -407,7 +412,7 @@
                         </div>
 
                     </article>
-                </section>
+                </div>
             </div>
 
             <div class="pure-u-1-5">
@@ -415,7 +420,7 @@
                     <h3 class="menu__zagalovok">
                         БРЕНДЫ:
                     </h3>
-                    <section class="menu__kategorii">
+                    <div class="menu__kategorii">
                         <p class="menu__nazvanie">
                             ШИНЫ
                         </p>
@@ -445,7 +450,7 @@
                                     class="checkbox__span"></span></label><br>
                             <a href="javascript: submitform()" class="menu__link submit">ВЫБРАТЬ</a>
                         </form>
-                    </section>
+                    </div>
                 </aside>
             </div>
 
@@ -454,7 +459,7 @@
 
 
     <footer class="footer">
-        <section class="footer__block">
+        <div class="footer__block">
             <div class="pure-g-r">
                 <div class="pure-u-1-12">
                     <img src="img/08.png" class="footer__img one" alt="">
@@ -482,8 +487,9 @@
                 </div>
 
             </div>
-        </section>
-        <section class="footer__bottom">
+        </div>
+
+        <div class="footer__bottom">
             <figure>
                 <ul class="menu menu__footer">
                     <li class="menu__item">
@@ -513,11 +519,31 @@
                     <p> Создание сайта © Global Vision</p>
                 </figcaption>
             </figure>
-        </section>
+        </div>
+
     </footer>
 
-
-</article>
+<div class="pure-g-r">
+    <div class="pure-u-1-6">
+        <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                     src="http://jigsaw.w3.org/css-validator/images/vcss"
+                     alt="Правильный CSS!" />
+            </a>
+        </p>
+    </div>
+    <div class="pure-u-1-6">
+        <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                     src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                     alt="Правильный CSS!" />
+            </a>
+        </p>
+    </div>
+</div>
+</div>
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

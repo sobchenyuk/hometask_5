@@ -9,11 +9,11 @@ body {
 }
 .header__top__main_div {
     display: inline-block;
-    zoom: 1;
+
     letter-spacing: normal;
     word-spacing: normal;
     vertical-align: top;
-    text-rendering: auto;
+
 }
 h3.header__top__main_h3 {
     font-size: 18px;
@@ -449,7 +449,7 @@ img.header__top__main_img.two {
 }
 .menu__spisok {
     position: relative;
-    left: -36px;
+    left: 4px;
     top: -16px;
 }
 .menu__item.one {
