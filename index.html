@@ -29,6 +29,25 @@
             document.myform2.submit();
         }
     </script>
+    <script type="text/javascript">
+        function validate_form ( )
+        {
+            valid = true;
+
+            if ( document.myform2.login.value == "" )
+            {
+                alert ( "Пожалуйста заполните поле 'Логин'." );
+                valid = false;
+            }
+            else if ( document.myform2.passvord.value == "" )
+            {
+                alert ( "Пожалуйста заполните поле 'Пароль'." );
+                valid = false;
+            }
+
+            return valid;
+        }
+    </script>
     <script>
         document.createElement('header');
         document.createElement('nav');
@@ -58,14 +77,14 @@
             </div>
 
             <div class="pure-u-1-2">
-                <form name="myform2" class="header__top__main_form pure-form" action="#">
+                <form name="myform2" class="header__top__main_form pure-form" action="1.html" method="POST" onsubmit="return validate_form ( );">
 
                     <img src="img/avtoriz.png" class="header__top__main_img two" alt="авторизация">
-                    <input type="text" placeholder="логин">
-                    <input type="password" placeholder="пароль">
+                    <input type="text" name="login" placeholder="логин" >
+                    <input type="password" name="passvord" placeholder="пароль" >
 
-
-                    <a href="javascript: submitform()" class="header__top__main_form__link submit">вход</a>
+                    <input type="submit" class="main__form__link submit" name="" value="вход">
+                    <!-- <a href="javascript: submitform()" class="header__top__main_form__link submit">вход</a> -->
                     <span class="header__top__main_form span">|</span>
                     <a href="#" class="header__top__main_form__link one">регистрация</a>
                     <a href="#" class="header__top__main_form__link two">забыли пароль?</a>
@@ -397,29 +416,35 @@
                         БРЕНДЫ:
                     </h3>
                     <section class="menu__kategorii">
-                    <p class="menu__nazvanie">
-                        ШИНЫ
-                    </p>
-                    <form action="#" class="form one">
-                        <label for="check-1" class="check-1">
-                            <input type="checkbox" id="check-1" class="checkbox"><span class="checkbox__span"></span></label><br>
-                        <label for="check-2" class="check-2">
-                            <input type="checkbox" id="check-2" class="checkbox"><span class="checkbox__span"></span></label><br>
-                        <label for="check-3" class="check-3">
-                            <input type="checkbox" id="check-3" class="checkbox"><span class="checkbox__span"></span></label><br>
-                    </form>
-                    <p class="menu__nazvanie diski-right">
-                        ДИСКИ
-                    </p>
-                    <form action="#" class="form two">
-                        <label for="check-4" class="check-4">
-                            <input type="checkbox"  id="check-4" class="checkbox"><span class="checkbox__span"></span></label><br>
-                        <label for="check-5" class="check-5">
-                            <input type="checkbox" id="check-5" class="checkbox"><span class="checkbox__span"></span></label><br>
-                        <label for="check-6" class="check-6">
-                            <input type="checkbox" id="check-6" class="checkbox"><span class="checkbox__span"></span></label><br>
-                        <a href="javascript: submitform()" class="menu__link submit">ВЫБРАТЬ</a>
-                    </form>
+                        <p class="menu__nazvanie">
+                            ШИНЫ
+                        </p>
+                        <form action="#" class="form one">
+                            <label for="check-1" class="check-1">
+                                <input type="checkbox" id="check-1" class="checkbox"><span
+                                    class="checkbox__span"></span></label><br>
+                            <label for="check-2" class="check-2">
+                                <input type="checkbox" id="check-2" class="checkbox"><span
+                                    class="checkbox__span"></span></label><br>
+                            <label for="check-3" class="check-3">
+                                <input type="checkbox" id="check-3" class="checkbox"><span
+                                    class="checkbox__span"></span></label><br>
+                        </form>
+                        <p class="menu__nazvanie diski-right">
+                            ДИСКИ
+                        </p>
+                        <form action="#" class="form two">
+                            <label for="check-4" class="check-4">
+                                <input type="checkbox" id="check-4" class="checkbox"><span
+                                    class="checkbox__span"></span></label><br>
+                            <label for="check-5" class="check-5">
+                                <input type="checkbox" id="check-5" class="checkbox"><span
+                                    class="checkbox__span"></span></label><br>
+                            <label for="check-6" class="check-6">
+                                <input type="checkbox" id="check-6" class="checkbox"><span
+                                    class="checkbox__span"></span></label><br>
+                            <a href="javascript: submitform()" class="menu__link submit">ВЫБРАТЬ</a>
+                        </form>
                     </section>
                 </aside>
             </div>
@@ -465,19 +490,19 @@
                         <a href="#" class="menu__item__link">О компании</a>
                     </li>
                     <li class="menu__item">
-                        <a  class="menu__item__link cherta">|</a>
+                        <a class="menu__item__link cherta">|</a>
                     </li>
                     <li class="menu__item">
                         <a href="#" class="menu__item__link d">Доставка</a>
                     </li>
                     <li class="menu__item">
-                        <a  class="menu__item__link cherta">|</a>
+                        <a class="menu__item__link cherta">|</a>
                     </li>
                     <li class="menu__item">
                         <a href="#" class="menu__item__link s">Статьи</a>
                     </li>
                     <li class="menu__item">
-                        <a  class="menu__item__link cherta">|</a>
+                        <a class="menu__item__link cherta">|</a>
                     </li>
                     <li class="menu__item">
                         <a href="#" class="menu__item__link k">Контакты</a>
@@ -498,6 +523,6 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
 </body>
 </html>
